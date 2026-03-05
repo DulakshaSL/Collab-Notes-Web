@@ -1,0 +1,37 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global gradient background for all pages */
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background:
+  radial-gradient(120vw 60vh at 20% 10%, rgba(99,102,241,.30), transparent 70%),
+  radial-gradient(100vw 50vh at 80% 20%, rgba(168,85,247,.25), transparent 70%),
+  radial-gradient(90vw 60vh at 50% 90%, rgba(34,211,238,.15), transparent 75%),
+  #05060a;
+
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+  -webkit-text-fill-color: white !important;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+body::-webkit-scrollbar-thumb {
+  @apply bg-gray-700 rounded-full;
+}
+body::-webkit-scrollbar-track {
+  @apply bg-gray-900;
+}
