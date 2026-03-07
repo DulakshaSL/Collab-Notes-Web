@@ -57,11 +57,11 @@ const Login = () => {
       <ToastContainer position="top-right" theme="dark" />
 
       {/* Main Card */}
-      <div className="w-full max-w-7xl rounded-3xl shadow-2xl flex overflow-hidden bg-black/20 backdrop-blur-md border border-gray-800">
+      <div className="w-full max-w-6xl rounded-3xl shadow-2xl flex overflow-hidden bg-black/20 backdrop-blur-md border border-gray-800">
      
         <div className="w-2/5 p-14 flex flex-col justify-center gap-4 text-white">
           <h1 className="text-4xl font-bold mb-2">Welcome Back</h1>
-          <p className="text-gray-400 mb-8">Login to your account</p>
+          <p className="text-gray-400 mb-8">Let's Login to your account</p>
 
           <motion.form
             initial={{ opacity: 0, x: -40 }}
@@ -165,7 +165,7 @@ const Login = () => {
     whileHover={{ scale: 1.03 }}
     whileTap={{ scale: 0.97 }}
     type="submit"
-    className="bg-gradient-to-r from-purple-600 via-indigo-600 to-pink-500 py-3 rounded-xl font-semibold shadow-lg hover:shadow-pink-500/50 transition-all duration-300"
+    className="bg-gradient-to-r from-purple-600 via-indigo-600 to-pink-500 py-3 rounded-xl font-semibold shadow-lg hover:shadow-pink-500/50 transition-all duration-300 cursor-pointer"
     >
     Login
     </motion.button>
@@ -176,25 +176,26 @@ const Login = () => {
       Don’t have an account?{" "}
       <Link
       to="/register"
-      className="text-purple-400 hover:text-pink-400 hover:underline transition-colors">
+      className="text-purple-400 hover:text-pink-400 hover:hand transition-colors">
       Sign up
       </Link>
       </p>
     
     </div>
 
-  <div className="w-3/5 relative overflow-hidden">
-    <video
-      autoPlay
-      muted
-      loop
-      playsInline
-      className="absolute inset-0 w-full h-full object-cover">
-      <source src="/videos/loginpage2.mp4" type="video/mp4" />
-      </video>
-    
-  <div className="absolute inset-0 bg-black/40" />
-    </div>
+  <div className="w-3/5 relative p-6">
+  <video
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="w-full h-full object-cover rounded-2xl"
+  >
+    <source src="/videos/loginpage2.mp4" type="video/mp4" />
+  </video>
+
+  <div className="absolute inset-0 bg-black/520 bg-backdrop-blur rounded-2xl"></div>
+</div>
      </div>
     </div>
   );
